@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Propositions de refonte — Clinique de la Maison Bleue</title><link rel="icon" href="images/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}html,body{height:100%;overflow:hidden;font-family:Inter,sans-serif}
+.bar{height:64px;background:#0f1f2c;color:#fff;display:flex;align-items:center;gap:16px;padding:0 16px}
+.ttl{font-size:.85rem;line-height:1.2;white-space:nowrap}.ttl small{display:block;opacity:.6}
+.choices{display:flex;gap:6px;flex:1;justify-content:center;overflow-x:auto}
+button{background:#1d3446;color:#cfe0ee;border:1px solid #2b4a61;border-radius:10px;padding:7px 14px;cursor:pointer;font-family:inherit;text-align:left;transition:.2s;white-space:nowrap}
+button b{display:block;font-size:.9rem;color:#fff}button span{font-size:.72rem;opacity:.75}button:hover{background:#27445b}
+button.on{background:#0071BC;border-color:#4aa3e0}.full{color:#9fc4e0;font-size:.8rem;white-space:nowrap}.full:hover{color:#fff}
+iframe{width:100%;height:calc(100% - 64px);border:0;display:block}
+@media(max-width:800px){.ttl,.full,button span{display:none}button{padding:8px 12px}}</style></head><body>
+<div class="bar"><div class="ttl"><b>Clinique de la Maison Bleue</b><small>Propositions de refonte</small></div>
+<div class="choices"><button data-n="1"><b>Choix 1</b><span>Douce & Sauge</span></button><button data-n="2"><b>Choix 2</b><span>Bleu Maison — Héritage</span></button><button data-n="3"><b>Choix 3</b><span>Premium Nuit</span></button><button data-n="4"><b>Choix 4</b><span>Éditorial Minimal</span></button><button data-n="5"><b>Choix 5</b><span>Chaleureux & Familial</span></button></div><a class="full" id="full" target="_blank" href="maquettes/choix-1.html">Plein écran ↗</a></div>
+<iframe id="f" src="maquettes/choix-1.html" title="Maquette"></iframe>
+<script>const f=document.getElementById('f'),full=document.getElementById('full'),bs=document.querySelectorAll('button');
+function show(n){f.src='maquettes/choix-'+n+'.html';full.href=f.src;bs.forEach(b=>b.classList.toggle('on',b.dataset.n==n));history.replaceState(null,'','#choix-'+n)}
+bs.forEach(b=>b.onclick=()=>show(b.dataset.n));const m=location.hash.match(/choix-(\d)/);show(m?m[1]:1);</script></body></html>
