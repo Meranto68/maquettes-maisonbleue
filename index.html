@@ -27,7 +27,7 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="fonts/barlow-semi-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="images/accueil.webp" as="image" fetchpriority="high">
+<link rel="preload" href="images/clinique_exterieur.webp" as="image" fetchpriority="high">
 
 <script type="application/ld+json">
 {
@@ -154,6 +154,12 @@ h1,h2,h3{font-family:var(--titre);font-weight:600;line-height:1.1;color:var(--bl
 .info .rs a{color:#fff;width:32px;height:32px}.info .rs a:hover{background:rgba(255,255,255,.12)}
 .info .rs svg{width:18px;height:18px}
 
+.info{position:relative;z-index:45}
+.outils-info{display:flex;align-items:center;gap:8px}
+.info .langue>button{background:transparent;border-color:rgba(255,255,255,.28);color:#fff;padding:4px 10px;font-size:.85rem}
+.info .langue>button:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.08)}
+.info .langue ul{color:var(--encre);font-size:1rem}
+
 /* ===== En-tête ===== */
 .nav{position:sticky;top:0;z-index:40;background:rgba(251,250,247,.95);backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:border-color .2s}
 .nav.scrolled{border-bottom-color:var(--trait)}
@@ -197,14 +203,27 @@ h1,h2,h3{font-family:var(--titre);font-weight:600;line-height:1.1;color:var(--bl
 .equipe-mini p{font-size:.95rem;color:var(--gris);line-height:1.35}.equipe-mini b{color:var(--encre);font-weight:600}
 .heroimg{position:relative;margin-top:56px}
 .heroimg>img{width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:32px}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+/* La façade dans la maison du logo */
+.maison{position:relative;aspect-ratio:400/430;width:100%;max-width:460px;justify-self:end;margin:0}
+.maison .photo{position:absolute;inset:22px;clip-path:polygon(50% 0,100% 34%,100% 100%,0 100%,0 34%);overflow:hidden;background:var(--facade-c)}
+.maison .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.maison .trait{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.maison .trait path{fill:none;stroke:var(--bleu);stroke-width:5;stroke-linejoin:miter;vector-effect:non-scaling-stroke}
+.maison .adresse{position:absolute;left:-26px;bottom:34px;background:#fff;border-radius:14px;padding:12px 18px;box-shadow:0 14px 34px rgba(27,35,99,.16);font-size:.92rem;line-height:1.35}
+.maison .adresse b{display:block;font-family:var(--titre);font-weight:600;font-size:1.12rem;color:var(--bleu)}
 /* Vignettes autour de la photo */
 .bulle{position:absolute;display:flex;align-items:center;gap:8px;background:#fff;color:var(--bleu);padding:10px 18px;border-radius:999px;font-weight:600;box-shadow:0 10px 26px rgba(27,35,99,.16)}
 .bulle svg{width:20px;height:20px;color:var(--facade)}
 .b1{left:5%;top:-20px}.b2{right:6%;top:32%}.b3{left:32%;bottom:-20px}
 @media (prefers-reduced-motion:no-preference){
   .bulle{animation:flotte 4.5s ease-in-out infinite}.b2{animation-delay:1.2s}.b3{animation-delay:2.4s}
-  .hero .w>*{animation:monte .7s ease-out both}.hero .w>*:nth-child(2){animation-delay:.06s}.hero .w>*:nth-child(3){animation-delay:.12s}.hero .w>*:nth-child(4){animation-delay:.18s}
+  .hero .txt>*{animation:monte .7s ease-out both}.hero .txt>*:nth-child(2){animation-delay:.06s}.hero .txt>*:nth-child(3){animation-delay:.12s}.hero .txt>*:nth-child(4){animation-delay:.18s}
+  .maison .trait path{stroke-dasharray:2400;stroke-dashoffset:2400;animation:trace 1.6s .2s cubic-bezier(.6,0,.2,1) forwards}
+  .maison .photo{opacity:0;animation:apparait .9s .8s ease-out forwards}
+  .maison .adresse{opacity:0;animation:apparait .6s 1.4s ease-out forwards}
 }
+@keyframes trace{to{stroke-dashoffset:0}}@keyframes apparait{to{opacity:1}}
 @keyframes flotte{50%{transform:translateY(-7px)}}
 @keyframes monte{from{opacity:0;transform:translateY(12px)}}
 
@@ -302,7 +321,8 @@ footer{position:relative;background:var(--bleu);color:var(--sur-bleu);margin-top
   .outils{margin-left:auto}
   .tiles,.pols{grid-template-columns:1fr 1fr}.mas{columns:2}
   .pol:nth-child(3n+1),.pol:nth-child(3n){transform:none}.pol:nth-child(odd){transform:rotate(-1.5deg)}.pol:nth-child(even){transform:rotate(1.5deg)}
-  .faqg,.where{grid-template-columns:1fr;gap:40px}
+  .faqg,.where,.hg{grid-template-columns:1fr;gap:40px}
+  .maison{justify-self:center;max-width:420px}
   .heroimg>img{aspect-ratio:16/10}
   .pied{grid-template-columns:1fr 1fr}
 }
@@ -313,6 +333,7 @@ footer{position:relative;background:var(--bleu);color:var(--sur-bleu);margin-top
   .nv .btn{padding:10px}.nv .btn .num{display:none}
   .langue>button{padding:7px 10px}.langue .code{display:none}
   .tiles{grid-template-columns:1fr}.pols{gap:22px 14px}.mas{columns:1}
+  .maison .adresse{left:0}.info .langue>button{padding:4px 8px}
   .bulle{font-size:.8rem;padding:7px 12px}.bulle svg{width:16px;height:16px}.b2{top:auto;bottom:22%;right:3%}.b1{left:3%}.b3{left:auto;right:8%}
   .vague{height:44px;top:-43px}
   .urg{padding:32px 26px}
@@ -355,13 +376,7 @@ footer{position:relative;background:var(--bleu);color:var(--sur-bleu);margin-top
 <!-- Barre d'information -->
 <div class="info"><div class="w">
   <p><span class="statut" data-statut data-i18n-attr="data-ouvert:statut.ouvert;data-ferme:statut.ferme" data-ouvert="Ouvert actuellement" data-ferme="Fermé actuellement"><span class="dot"></span><span class="st-txt">Horaires</span></span> <span class="urg-txt"><span class="long">·</span> <span class="lbl" data-i18n="info.urg">Urgences 24h/24 :</span> <a href="tel:+33389406606" data-i18n="tel">03&nbsp;89&nbsp;40&nbsp;66&nbsp;06</a></span></p>
-  <div class="rs"><a href="https://www.facebook.com/100077207589314/" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a><a href="https://www.instagram.com/cliniquevetmaisonbleue/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a></div>
-</div></div>
-
-<header class="nav" id="nav"><div class="w nv">
-  <a href="./" data-i18n-attr="aria-label:nav.accueil" aria-label="Accueil — Clinique Vétérinaire de la Maison Bleue"><img src="images/logo-bleu.png" alt="Clinique Vétérinaire de la Maison Bleue" class="logo" width="600" height="460"></a>
-  <nav class="menu" id="menu" data-i18n-attr="aria-label:nav.label" aria-label="Menu principal"><a href="#soins" data-i18n="nav.soins">Nos soins</a><a href="#equipe" data-i18n="nav.equipe">L'équipe</a><a href="#histoire" data-i18n="nav.histoire">Notre histoire</a><a href="#faq" data-i18n="nav.faq">Questions</a><a href="#acces" data-i18n="nav.acces">Nous trouver</a></nav>
-  <div class="outils">
+  <div class="outils-info"><div class="rs"><a href="https://www.facebook.com/100077207589314/" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a><a href="https://www.instagram.com/cliniquevetmaisonbleue/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a></div>
     <div class="langue" id="langue" data-etat="ferme">
       <button type="button" aria-expanded="false" aria-controls="langues" id="langue-btn"><svg class="drapeau" data-i18n-attr="class:lang.classe" aria-hidden="true"><use href="#f-fr" data-i18n-attr="href:lang.drapeau"/></svg><span class="code" data-i18n="lang.code">FR</span><svg class="chev" aria-hidden="true"><use href="#i-chev"/></svg><span class="sr" data-i18n="lang.changer">Changer de langue</span></button>
       <ul id="langues">
@@ -370,19 +385,33 @@ footer{position:relative;background:var(--bleu);color:var(--sur-bleu);margin-top
         <li><a href="de/" hreflang="de-CH" lang="de-CH"><svg class="drapeau ch" aria-hidden="true"><use href="#f-ch"/></svg>Deutsch (Schweiz)</a></li>
       </ul>
     </div>
+  </div>
+</div></div>
+
+<header class="nav" id="nav"><div class="w nv">
+  <a href="./" data-i18n-attr="aria-label:nav.accueil" aria-label="Accueil — Clinique Vétérinaire de la Maison Bleue"><img src="images/logo-bleu.png" alt="Clinique Vétérinaire de la Maison Bleue" class="logo" width="600" height="460"></a>
+  <nav class="menu" id="menu" data-i18n-attr="aria-label:nav.label" aria-label="Menu principal"><a href="#soins" data-i18n="nav.soins">Nos soins</a><a href="#equipe" data-i18n="nav.equipe">L'équipe</a><a href="#histoire" data-i18n="nav.histoire">Notre histoire</a><a href="#faq" data-i18n="nav.faq">Questions</a><a href="#acces" data-i18n="nav.acces">Nous trouver</a></nav>
+  <div class="outils">
     <a href="tel:+33389406606" class="btn" aria-label="03 89 40 66 06"><svg aria-hidden="true"><use href="#i-tel"/></svg><span class="num" data-i18n="tel">03&nbsp;89&nbsp;40&nbsp;66&nbsp;06</span></a>
   </div>
   <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="ic" d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 </div></header>
 
 <main id="contenu">
-<section class="hero"><div class="w">
+<section class="hero"><div class="w hg">
+  <div class="txt">
   <h1 data-i18n="hero.h1">Bienvenue à la Maison Bleue</h1>
   <p class="lead" data-i18n="hero.lead">Votre clinique vétérinaire à Altkirch, au cœur du Sundgau. Toute l'équipe est à votre écoute pour répondre au mieux aux besoins de vos chats, chiens et rongeurs de tous poils.</p>
   <div class="ctas"><a href="https://www.monrendezvousveto.fr/clinique/altkirch/clinique-veterinaire-de-la-maison-bleue" target="_blank" rel="noopener" class="btn"><svg aria-hidden="true"><use href="#i-rdv"/></svg><span data-i18n="cta.rdv">Prendre rendez-vous en ligne</span></a><a href="#equipe" class="btn ligne" data-i18n="cta.team">Rencontrer l'équipe</a></div>
   <div class="equipe-mini"><div class="avs"><img src="images/dr-grandjean.webp" alt="" width="46" height="46"><img src="images/dr-cambier.webp" alt="" width="46" height="46"><img src="images/dr-kleinmann.webp" alt="" width="46" height="46"><img src="images/dr-lang.webp" alt="" width="46" height="46"><img src="images/asv-marina.webp" alt="" width="46" height="46"></div><p data-i18n="hero.small"><b>6 vétérinaires et 6 auxiliaires</b><br>Urgences assurées 24h/24</p></div>
+  </div>
+  <figure class="maison">
+    <div class="photo"><img src="images/clinique_exterieur.webp" alt="La façade bleue de la clinique vétérinaire, 10 Faubourg de Mulhouse à Altkirch" data-i18n-attr="alt:maison.alt" width="1400" height="1009" fetchpriority="high"></div>
+    <svg class="trait" viewBox="0 0 400 430" preserveAspectRatio="none" aria-hidden="true"><path d="M120 66 200 2 398 147V428H2V147L68 98"/></svg>
+    <figcaption class="adresse"><b data-i18n="maison.cap">La maison bleue</b>10 Faubourg de Mulhouse, Altkirch</figcaption>
+  </figure>
 </div>
-<div class="w heroimg"><img src="images/accueil.webp" alt="L'accueil rénové de la clinique vétérinaire" data-i18n-attr="alt:hero.alt" width="1400" height="932" fetchpriority="high">
+<div class="w heroimg"><img src="images/accueil.webp" alt="L'accueil rénové de la clinique vétérinaire" data-i18n-attr="alt:hero.alt" width="1400" height="932">
   <p class="bulle b1"><svg aria-hidden="true"><use href="#i-maison"/></svg><span data-i18n="b1">Locaux rénovés</span></p>
   <p class="bulle b2"><svg aria-hidden="true"><use href="#i-pmr"/></svg><span data-i18n="b2">Accès PMR</span></p>
   <p class="bulle b3"><svg aria-hidden="true"><use href="#i-clim"/></svg><span data-i18n="b3">Climatisé</span></p>
