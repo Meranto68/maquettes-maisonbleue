@@ -1,0 +1,20 @@
+{
+  "name": "Clinique Vétérinaire de la Maison Bleue",
+  "short_name": "Maison Bleue",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#fbfaf7",
+  "theme_color": "#2b3990",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

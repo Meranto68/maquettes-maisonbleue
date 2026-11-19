@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.clinique-maisonbleue.com/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.clinique-maisonbleue.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clinique-maisonbleue.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.clinique-maisonbleue.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clinique-maisonbleue.com/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.clinique-maisonbleue.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.clinique-maisonbleue.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clinique-maisonbleue.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.clinique-maisonbleue.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clinique-maisonbleue.com/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.clinique-maisonbleue.com/de/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.clinique-maisonbleue.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clinique-maisonbleue.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.clinique-maisonbleue.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clinique-maisonbleue.com/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.clinique-maisonbleue.com/mentions-legales.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.clinique-maisonbleue.com/confidentialite.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.clinique-maisonbleue.com/conditions-generales.html</loc>
+    <priority>0.3</priority>
+  </url>
+</urlset>

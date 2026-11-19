@@ -1,2 +1,3 @@
+# Maquette : rien n'est indexé tant que EN_LIGNE = False dans outils/build.py
 User-agent: *
 Disallow: /
