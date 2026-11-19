@@ -18,3 +18,11 @@ Maquette du nouveau site (temporaire, non indexée par Google).
 3. Dans Google Search Console : ajouter le domaine et envoyer `sitemap.xml`.
 4. Compléter et vérifier la fiche Google Business Profile de la clinique (horaires, photos, lien du site).
 5. Remplir les zones surlignées en jaune `[...]` dans les pages légales.
+
+## Note Google (avis clients)
+La note s'affiche toute seule sous les photos de l'équipe, en haut de la page d'accueil. Elle est mise à jour une fois par jour par `avis.php` (PHP, hébergement OVH).
+1. Créer une clé Google « Places API (New) » (voir `outils/avis-config.exemple.php`).
+2. Copier `outils/avis-config.exemple.php` en `outils/avis-config.php` **directement chez OVH** et y coller la clé.
+   Ce fichier ne doit jamais aller sur GitHub.
+3. Tant qu'il n'y a pas de clé (ou sur GitHub Pages, qui ne gère pas le PHP), l'encart reste masqué.
+   Aperçu sur la maquette : ajouter `?apercu-avis` à l'adresse (note d'exemple).
