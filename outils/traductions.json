@@ -108,10 +108,10 @@
     "ft.cgf": "Terms of operation (in French)",
     "maison.alt": "The blue façade of the veterinary clinic, 10 Faubourg de Mulhouse in Altkirch",
     "maison.cap": "The blue house",
-    "avis.mot": "Google reviews",
     "barre.label": "Quick actions",
     "barre.appeler": "Call",
-    "barre.rdv": "Book"
+    "barre.rdv": "Book",
+    "rs.google": "Our Google page"
   },
   "de": {
     "meta.title": "Tierarzt in Altkirch bei Basel | Tierklinik Maison Bleue",
@@ -222,9 +222,9 @@
     "ft.cgf": "Allgemeine Bedingungen (auf Französisch)",
     "maison.alt": "Die blaue Fassade der Tierklinik, 10 Faubourg de Mulhouse in Altkirch",
     "maison.cap": "Das blaue Haus",
-    "avis.mot": "Google-Bewertungen",
     "barre.label": "Schnellaktionen",
     "barre.appeler": "Anrufen",
-    "barre.rdv": "Termin"
+    "barre.rdv": "Termin",
+    "rs.google": "Unser Google-Profil"
   }
 }

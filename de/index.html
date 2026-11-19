@@ -213,12 +213,6 @@ h1,h2,h3{text-wrap:balance}
 .maison .trait path{fill:none;stroke:var(--bleu);stroke-width:5;stroke-linejoin:miter;vector-effect:non-scaling-stroke}
 .maison .adresse{position:absolute;left:-26px;bottom:34px;background:#fff;border-radius:14px;padding:12px 18px;box-shadow:0 14px 34px rgba(27,35,99,.16);font-size:.92rem;line-height:1.35}
 .maison .adresse b{display:block;font-family:var(--titre);font-weight:600;font-size:1.12rem;color:var(--bleu)}
-/* Note Google : discrète */
-.note-google{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-size:.92rem;color:var(--gris)}
-.note-google[hidden]{display:none}
-.note-google .etoiles{--p:0%;letter-spacing:1px;font-size:1rem;background:linear-gradient(90deg,var(--facade) var(--p),#d3d8e6 var(--p));-webkit-background-clip:text;background-clip:text;color:transparent}
-.note-google .val{color:var(--encre);font-weight:600}
-.note-google:hover .nb{text-decoration:underline}
 /* Barre d'action fixe (téléphone) */
 .barre-mobile{display:none}
 /* Vignettes autour de la photo */
@@ -381,6 +375,7 @@ footer{position:relative;background:var(--bleu);color:var(--sur-bleu);margin-top
 <symbol id="i-route" viewBox="0 0 24 24"><path class="ic" d="M12 21s-6-5.6-6-11a6 6 0 0 1 12 0c0 5.4-6 11-6 11z"></path><circle class="ic" cx="12" cy="10" r="2.2"></circle></symbol>
 <symbol id="i-fb" viewBox="0 0 24 24"><path class="ic" d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V10H6v4h3v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></symbol>
 <symbol id="i-ig" viewBox="0 0 24 24"><rect class="ic" height="18" rx="5" width="18" x="3" y="3"></rect><circle class="ic" cx="12" cy="12" r="4"></circle><circle cx="17.4" cy="6.6" fill="currentColor" r="1.1"></circle></symbol>
+<symbol id="i-google" viewBox="0 0 24 24"><path class="ic" d="M20 12a8 8 0 1 1-2.34-5.66M20 12h-7"></path></symbol>
 <symbol id="i-chev" viewBox="0 0 24 24"><path class="ic" d="m6 9 6 6 6-6"></path></symbol>
 <symbol id="f-fr" preserveAspectRatio="none" viewBox="0 0 3 2"><path d="M0 0h1v2H0z" fill="#002654"></path><path d="M1 0h1v2H1z" fill="#fff"></path><path d="M2 0h1v2H2z" fill="#ce1126"></path></symbol>
 <symbol id="f-gb" preserveAspectRatio="none" viewBox="0 0 60 30"><clipPath id="gb-c"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"></path></clipPath><path d="M0 0h60v30H0z" fill="#012169"></path><path d="M0 0l60 30M60 0 0 30" stroke="#fff" stroke-width="6"></path><path clip-path="url(#gb-c)" d="M0 0l60 30M60 0 0 30" stroke="#c8102e" stroke-width="4"></path><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"></path><path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6"></path></symbol>
@@ -389,7 +384,7 @@ footer{position:relative;background:var(--bleu);color:var(--sur-bleu);margin-top
 <!-- Barre d'information -->
 <div class="info"><div class="w">
 <p><span class="statut" data-ferme="Jetzt geschlossen" data-i18n-attr="data-ouvert:statut.ouvert;data-ferme:statut.ferme" data-ouvert="Jetzt geöffnet" data-statut=""><span class="dot"></span><span class="st-txt">Horaires</span></span> <span class="urg-txt"><span class="long">·</span> <span class="lbl" data-i18n="info.urg">Notfälle rund um die Uhr:</span> <a data-i18n="tel" href="tel:+33389406606">+33 3 89 40 66 06</a></span></p>
-<div class="outils-info"><div class="rs"><a aria-label="Facebook" href="https://www.facebook.com/100077207589314/" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-fb"></use></svg></a><a aria-label="Instagram" href="https://www.instagram.com/cliniquevetmaisonbleue/" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-ig"></use></svg></a></div>
+<div class="outils-info"><div class="rs"><a aria-label="Facebook" href="https://www.facebook.com/100077207589314/" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-fb"></use></svg></a><a aria-label="Instagram" href="https://www.instagram.com/cliniquevetmaisonbleue/" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-ig"></use></svg></a><a aria-label="Unser Google-Profil" data-i18n-attr="aria-label:rs.google" href="https://www.google.com/maps/search/?api=1&amp;query=Clinique+V%C3%A9t%C3%A9rinaire+de+la+Maison+Bleue+Altkirch" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-google"></use></svg></a></div>
 <div class="langue" data-etat="ferme" id="langue">
 <button aria-controls="langues" aria-expanded="false" id="langue-btn" type="button"><svg aria-hidden="true" class="drapeau ch" data-i18n-attr="class:lang.classe"><use data-i18n-attr="href:lang.drapeau" href="#f-ch"></use></svg><span class="code" data-i18n="lang.code">DE</span><svg aria-hidden="true" class="chev"><use href="#i-chev"></use></svg><span class="sr" data-i18n="lang.changer">Sprache wechseln</span></button>
 <ul id="langues">
@@ -415,7 +410,6 @@ footer{position:relative;background:var(--bleu);color:var(--sur-bleu);margin-top
 <p class="lead" data-i18n="hero.lead">Ihre Tierklinik in Altkirch, mitten im Sundgau, 30 Minuten von Basel. Unser ganzes Team kümmert sich mit Herz um Ihre Katzen, Hunde und Nager aller Art.</p>
 <div class="ctas"><a class="btn" href="https://www.monrendezvousveto.fr/clinique/altkirch/clinique-veterinaire-de-la-maison-bleue" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-rdv"></use></svg><span data-i18n="cta.rdv">Online-Termin buchen</span></a><a class="btn ligne" data-i18n="cta.team" href="#equipe">Das Team kennenlernen</a></div>
 <div class="equipe-mini"><div class="avs"><img alt="" height="46" src="../images/dr-grandjean.webp" width="46"/><img alt="" height="46" src="../images/dr-cambier.webp" width="46"/><img alt="" height="46" src="../images/dr-kleinmann.webp" width="46"/><img alt="" height="46" src="../images/dr-lang.webp" width="46"/><img alt="" height="46" src="../images/asv-marina.webp" width="46"/></div><p data-i18n="hero.small"><b>6 Tierärztinnen und Tierärzte, 6 Praxisassistentinnen</b><br/>Notfälle rund um die Uhr</p></div>
-<a class="note-google" data-i18n-attr="data-mot:avis.mot" data-mot="Google-Bewertungen" hidden="" href="https://www.google.com/maps/search/?api=1&amp;query=Clinique+V%C3%A9t%C3%A9rinaire+de+la+Maison+Bleue+Altkirch" id="note-google" rel="noopener" target="_blank"><span aria-hidden="true" class="etoiles">★★★★★</span><b class="val"></b><span class="nb"></span></a>
 </div>
 <figure class="maison">
 <div class="photo"><img alt="Die blaue Fassade der Tierklinik, 10 Faubourg de Mulhouse in Altkirch" data-i18n-attr="alt:maison.alt" fetchpriority="high" height="1009" src="../images/clinique_exterieur.webp" width="1400"/></div>
@@ -512,7 +506,7 @@ footer{position:relative;background:var(--bleu);color:var(--sur-bleu);margin-top
 <div><img alt="Clinique Vétérinaire de la Maison Bleue" height="460" loading="lazy" src="../images/logo-blanc.png" width="600"/><p data-i18n="ft.desc">Tierklinik in Altkirch seit 1986.</p></div>
 <div><h2 data-i18n="ft.contact">Kontakt</h2><ul><li>10 Faubourg de Mulhouse</li><li data-i18n="wh.ville">68130 Altkirch, Frankreich</li><li><a data-i18n="tel" href="tel:+33389406606">+33 3 89 40 66 06</a></li><li><a href="mailto:contact@clinique-maisonbleue.com">contact@clinique-maisonbleue.com</a></li></ul></div>
 <div><h2 data-i18n="ho.t">Sprechstunden</h2><ul><li><span data-i18n="ho.d1">Montag – Freitag</span> : <span data-i18n="ho.h1">9–12 Uhr · 14–19 Uhr</span></li><li><span data-i18n="ho.d2">Samstag</span> : <span data-i18n="ho.h2">9–12 Uhr</span></li><li data-i18n="ft.urg">Notfälle rund um die Uhr</li></ul></div>
-<div><h2 data-i18n="ft.suivre">Folgen Sie uns</h2><div class="rs"><a aria-label="Facebook" href="https://www.facebook.com/100077207589314/" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-fb"></use></svg></a><a aria-label="Instagram" href="https://www.instagram.com/cliniquevetmaisonbleue/" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-ig"></use></svg></a></div><p data-i18n="ft.suivre.p">Neuigkeiten aus der Klinik und von unseren Patienten.</p></div>
+<div><h2 data-i18n="ft.suivre">Folgen Sie uns</h2><div class="rs"><a aria-label="Facebook" href="https://www.facebook.com/100077207589314/" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-fb"></use></svg></a><a aria-label="Instagram" href="https://www.instagram.com/cliniquevetmaisonbleue/" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-ig"></use></svg></a><a aria-label="Unser Google-Profil" data-i18n-attr="aria-label:rs.google" href="https://www.google.com/maps/search/?api=1&amp;query=Clinique+V%C3%A9t%C3%A9rinaire+de+la+Maison+Bleue+Altkirch" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-google"></use></svg></a></div><p data-i18n="ft.suivre.p">Neuigkeiten aus der Klinik und von unseren Patienten.</p></div>
 </div>
 <div class="w bas"><span>© Clinique Vétérinaire de la Maison Bleue · SELARL Grandjean</span>
 <nav aria-label="Rechtliche Hinweise" data-i18n-attr="aria-label:ft.legal"><a data-i18n="ft.ml" href="../mentions-legales.html">Impressum (auf Französisch)</a><a data-i18n="ft.conf" href="../confidentialite.html">Datenschutz (auf Französisch)</a><a data-i18n="ft.cgf" href="../conditions-generales.html">Allgemeine Bedingungen (auf Französisch)</a></nav></div>
@@ -546,20 +540,6 @@ burger.addEventListener('click',()=>{const x=menu.classList.toggle('ouvert');bur
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('ouvert');burger.setAttribute('aria-expanded','false')}));
 const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>50),{passive:true});
 document.querySelectorAll('.tile').forEach(t=>{t.addEventListener('click',()=>t.classList.toggle('vu'));t.addEventListener('keydown',e=>{if(e.key=='Enter'||e.key==' '){e.preventDefault();t.classList.toggle('vu')}})});
-
-/* Note Google (servie par avis.php, mise à jour une fois par jour) */
-(async()=>{
-  const el=document.getElementById('note-google');let d=null;
-  if(new URLSearchParams(location.search).has('apercu-avis'))d={note:4.8,nombre:127};
-  else try{const r=await fetch(new URL('avis.php',document.querySelector('link[rel=manifest]').href));if(r.ok)d=await r.json()}catch(e){}
-  if(!d||!d.note)return;
-  const l=document.documentElement.lang,f=new Intl.NumberFormat(l,{minimumFractionDigits:1,maximumFractionDigits:1});
-  el.querySelector('.etoiles').style.setProperty('--p',Math.min(100,d.note/5*100)+'%');
-  el.querySelector('.val').textContent=f.format(d.note)+'/5';
-  el.querySelector('.nb').textContent=new Intl.NumberFormat(l).format(d.nombre)+' '+el.dataset.mot;
-  if(d.lien)el.href=d.lien;
-  el.hidden=false;
-})();
 
 /* Carte Google chargée seulement à la demande (vie privée + vitesse) */
 document.getElementById('carte-btn').addEventListener('click',()=>{
