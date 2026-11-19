@@ -537,14 +537,14 @@ footer{position:relative;background:var(--bleu);color:var(--sur-bleu);margin-top
   <div class="contact" id="contact">
     <div class="contact-txt">
       <h2 data-i18n="ct.h2">Nous écrire</h2>
-      <p data-i18n="ct.p">Une question, une demande de devis, un document à nous transmettre ? Écrivez-nous, nous vous répondons au plus vite.</p>
+      <p data-i18n="ct.p">Écrivez-nous, nous vous répondons au plus vite.</p>
       <p class="ct-note"><svg aria-hidden="true"><use href="#i-urg"/></svg><span data-i18n="ct.urg">Pour une urgence, appelez le 03&nbsp;89&nbsp;40&nbsp;66&nbsp;06. Pour un rendez-vous, utilisez la réservation en ligne.</span></p>
     </div>
     <form class="form" id="form-contact" action="contact.php" method="post">
       <div class="champs">
         <p><label for="ct-nom" data-i18n="ct.nom">Nom et prénom</label><input id="ct-nom" name="nom" type="text" autocomplete="name" required maxlength="100"></p>
         <p><label for="ct-email" data-i18n="ct.email">E-mail</label><input id="ct-email" name="email" type="email" autocomplete="email" required maxlength="150"></p>
-        <p><label for="ct-tel"><span data-i18n="ct.tel">Téléphone</span> <small data-i18n="ct.facultatif">(facultatif)</small></label><input id="ct-tel" name="telephone" type="tel" autocomplete="tel" maxlength="40"></p>
+        <p><label for="ct-tel" data-i18n="ct.tel">Téléphone</label><input id="ct-tel" name="telephone" type="tel" autocomplete="tel" required maxlength="40"></p>
         <p><label for="ct-animal"><span data-i18n="ct.animal">Votre animal</span> <small data-i18n="ct.facultatif">(facultatif)</small></label><input id="ct-animal" name="animal" type="text" maxlength="100" placeholder="Ex. : Filou, chat de 4 ans" data-i18n-attr="placeholder:ct.animal.ex"></p>
       </div>
       <p><label for="ct-message" data-i18n="ct.message">Votre message</label><textarea id="ct-message" name="message" rows="6" required maxlength="5000"></textarea></p>

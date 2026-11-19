@@ -167,7 +167,7 @@ def page_legale(fichier, titre, description, corps):
 <header><div class="w"><a href="./"><img src="images/logo-bleu.png" alt="Clinique Vétérinaire de la Maison Bleue — accueil" width="600" height="460"></a><a class="retour" href="./">Retour au site</a></div></header>
 <main><div class="w">
 <h1>{titre}</h1>
-<p class="maj">Dernière mise à jour : <span class="a-completer">[date de mise en ligne]</span></p>
+<p class="maj">Dernière mise à jour : 1<sup>er</sup> décembre 2026</p>
 {corps}
 <nav class="legal" aria-label="Informations légales"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="conditions-generales.html">Conditions générales de fonctionnement</a></nav>
 </div></main>
@@ -200,7 +200,10 @@ page_legale("mentions-legales.html", "Mentions légales",
 
 <h2>Hébergement</h2>
 <div class="bloc">
-<p>{AC("nom de l'hébergeur du nouveau site — par exemple : OVH SAS, 2 rue Kellermann, 59100 Roubaix, France, www.ovhcloud.com")}</p>
+<p><strong>OVH SAS</strong> (OVHcloud) — SAS au capital de 50 000 000 €</p>
+<p>2 rue Kellermann, 59100 Roubaix, France</p>
+<p>RCS Lille Métropole 424 761 419 00045 · TVA FR22 424 761 419</p>
+<p><a href="https://www.ovhcloud.com/fr/" rel="noopener">www.ovhcloud.com</a></p>
 </div>
 
 <h2>Conception du site</h2>
@@ -228,13 +231,13 @@ page_legale("confidentialite.html", "Politique de confidentialité",
 
 <h2>Ce que fait ce site</h2>
 <ul>
-<li><strong>Formulaire de contact :</strong> les informations que vous saisissez (nom, e-mail, téléphone et animal si vous les indiquez, message) sont envoyées par e-mail à la clinique, uniquement pour vous répondre. Elles ne sont pas enregistrées sur le site et sont conservées dans la messagerie de la clinique le temps nécessaire au suivi de votre demande.</li>
+<li><strong>Formulaire de contact :</strong> les informations que vous saisissez (nom, e-mail, téléphone, animal si vous l'indiquez, message) sont envoyées par e-mail à la clinique (contact@clinique-maisonbleue.com), via le serveur de messagerie d'OVH, uniquement pour vous répondre. Elles ne sont pas enregistrées sur le site et sont conservées dans la messagerie de la clinique le temps nécessaire au suivi de votre demande.</li>
 <li><strong>Aucun compte, aucune mesure d'audience.</strong></li>
 <li><strong>Aucun cookie</strong> n'est déposé par le site lui-même. Les polices de caractères sont hébergées sur le site, sans appel à un service extérieur.</li>
 <li><strong>Carte Google Maps :</strong> elle ne se charge que si vous cliquez sur « Afficher la carte ». Google peut alors recevoir votre adresse IP et déposer des cookies, selon sa propre <a href="https://policies.google.com/privacy?hl=fr" rel="noopener">politique de confidentialité</a>.</li>
 <li><strong>Prise de rendez-vous en ligne :</strong> le bouton ouvre le service MonRendezVousVéto, qui traite vos données pour gérer votre rendez-vous selon ses propres conditions.</li>
 <li><strong>Facebook et Instagram :</strong> ce sont de simples liens. Aucune donnée n'est transmise à ces réseaux tant que vous ne cliquez pas.</li>
-<li><strong>Hébergement :</strong> comme tout site, l'hébergeur enregistre des journaux techniques (adresse IP, date, page demandée) pour la sécurité du service, conservés {AC("durée selon l'hébergeur, en général 12 mois maximum")}.</li>
+<li><strong>Hébergement :</strong> le site est hébergé en France par OVH SAS (Roubaix). Comme tout hébergeur, OVH enregistre des journaux techniques (adresse IP, date, page demandée) pour la sécurité du service ; ils sont conservés un an au maximum, comme le prévoit la loi.</li>
 </ul>
 
 <h2>Vos échanges avec la clinique</h2>

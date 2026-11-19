@@ -526,14 +526,14 @@ footer{position:relative;background:var(--bleu);color:var(--sur-bleu);margin-top
 <div class="contact" id="contact">
 <div class="contact-txt">
 <h2 data-i18n="ct.h2">Schreiben Sie uns</h2>
-<p data-i18n="ct.p">Eine Frage, eine Offertanfrage, ein Dokument für uns? Schreiben Sie uns, wir antworten so rasch wie möglich.</p>
+<p data-i18n="ct.p">Schreiben Sie uns, wir antworten so rasch wie möglich.</p>
 <p class="ct-note"><svg aria-hidden="true"><use href="#i-urg"></use></svg><span data-i18n="ct.urg">Im Notfall rufen Sie bitte +33 3 89 40 66 06 an. Für einen Termin nutzen Sie die Online-Buchung.</span></p>
 </div>
 <form action="contact.php" class="form" id="form-contact" method="post">
 <div class="champs">
 <p><label data-i18n="ct.nom" for="ct-nom">Vor- und Nachname</label><input autocomplete="name" id="ct-nom" maxlength="100" name="nom" required="" type="text"/></p>
 <p><label data-i18n="ct.email" for="ct-email">E-Mail</label><input autocomplete="email" id="ct-email" maxlength="150" name="email" required="" type="email"/></p>
-<p><label for="ct-tel"><span data-i18n="ct.tel">Telefon</span> <small data-i18n="ct.facultatif">(optional)</small></label><input autocomplete="tel" id="ct-tel" maxlength="40" name="telephone" type="tel"/></p>
+<p><label data-i18n="ct.tel" for="ct-tel">Telefon</label><input autocomplete="tel" id="ct-tel" maxlength="40" name="telephone" required="" type="tel"/></p>
 <p><label for="ct-animal"><span data-i18n="ct.animal">Ihr Tier</span> <small data-i18n="ct.facultatif">(optional)</small></label><input data-i18n-attr="placeholder:ct.animal.ex" id="ct-animal" maxlength="100" name="animal" placeholder="z. B. Filou, Katze, 4 Jahre" type="text"/></p>
 </div>
 <p><label data-i18n="ct.message" for="ct-message">Ihre Nachricht</label><textarea id="ct-message" maxlength="5000" name="message" required="" rows="6"></textarea></p>

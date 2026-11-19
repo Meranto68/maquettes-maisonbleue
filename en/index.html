@@ -526,14 +526,14 @@ footer{position:relative;background:var(--bleu);color:var(--sur-bleu);margin-top
 <div class="contact" id="contact">
 <div class="contact-txt">
 <h2 data-i18n="ct.h2">Write to us</h2>
-<p data-i18n="ct.p">A question, a request for a quote, a document to send us? Write to us and we will reply as soon as possible.</p>
+<p data-i18n="ct.p">Write to us, we will reply as soon as possible.</p>
 <p class="ct-note"><svg aria-hidden="true"><use href="#i-urg"></use></svg><span data-i18n="ct.urg">For an emergency, call +33 3 89 40 66 06. To make an appointment, please use online booking.</span></p>
 </div>
 <form action="contact.php" class="form" id="form-contact" method="post">
 <div class="champs">
 <p><label data-i18n="ct.nom" for="ct-nom">Full name</label><input autocomplete="name" id="ct-nom" maxlength="100" name="nom" required="" type="text"/></p>
 <p><label data-i18n="ct.email" for="ct-email">Email</label><input autocomplete="email" id="ct-email" maxlength="150" name="email" required="" type="email"/></p>
-<p><label for="ct-tel"><span data-i18n="ct.tel">Phone</span> <small data-i18n="ct.facultatif">(optional)</small></label><input autocomplete="tel" id="ct-tel" maxlength="40" name="telephone" type="tel"/></p>
+<p><label data-i18n="ct.tel" for="ct-tel">Phone</label><input autocomplete="tel" id="ct-tel" maxlength="40" name="telephone" required="" type="tel"/></p>
 <p><label for="ct-animal"><span data-i18n="ct.animal">Your pet</span> <small data-i18n="ct.facultatif">(optional)</small></label><input data-i18n-attr="placeholder:ct.animal.ex" id="ct-animal" maxlength="100" name="animal" placeholder="E.g. Filou, 4-year-old cat" type="text"/></p>
 </div>
 <p><label data-i18n="ct.message" for="ct-message">Your message</label><textarea id="ct-message" maxlength="5000" name="message" required="" rows="6"></textarea></p>

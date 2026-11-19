@@ -5,7 +5,7 @@
  * Seul réglage possible : les deux adresses ci-dessous.
  */
 const DESTINATAIRE = 'contact@clinique-maisonbleue.com';     // qui reçoit les messages
-const EXPEDITEUR   = 'site@clinique-maisonbleue.com';        // doit être une adresse du domaine (exigence OVH)
+const EXPEDITEUR   = 'contact@clinique-maisonbleue.com';     // adresse du domaine (exigence OVH)
 
 $ajax = ($_POST['ajax'] ?? '') === '1';
 function repondre($ok, $erreur = '') {
@@ -37,7 +37,7 @@ $animal    = $ligne($_POST['animal'] ?? '', 100);
 $message   = trim(mb_substr((string)($_POST['message'] ?? ''), 0, 5000));
 $langue    = $ligne($_POST['langue'] ?? 'fr', 10);
 
-if ($nom === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) repondre(false, 'champs');
+if ($nom === '' || $telephone === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) repondre(false, 'champs');
 
 // Limite : un message par minute et par adresse IP
 $ip = $_SERVER['REMOTE_ADDR'] ?? '';
@@ -48,7 +48,7 @@ if (is_file($verrou) && time() - filemtime($verrou) < 60) repondre(false, 'trop'
 $sujet = 'Message du site — ' . $nom;
 $corps = "Nouveau message reçu depuis le site de la clinique.\n\n"
        . "Nom : $nom\nE-mail : $email\n"
-       . ($telephone !== '' ? "Téléphone : $telephone\n" : '')
+       . "Téléphone : $telephone\n"
        . ($animal !== '' ? "Animal : $animal\n" : '')
        . "Langue du site : $langue\n\n"
        . "Message :\n$message\n\n"
