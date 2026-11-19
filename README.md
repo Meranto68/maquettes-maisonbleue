@@ -1,3 +1,3 @@
-# Maquettes – Clinique de la Maison Bleue
+# Clinique Vétérinaire de la Maison Bleue
 
-Propositions de refonte (temporaire).
+Maquette du nouveau site (temporaire) : `index.html`.
