@@ -111,7 +111,23 @@
     "barre.label": "Quick actions",
     "barre.appeler": "Call",
     "barre.rdv": "Book",
-    "rs.google": "Our Google page"
+    "rs.google": "Our Google page",
+    "ct.h2": "Write to us",
+    "ct.p": "A question, a request for a quote, a document to send us? Write to us and we will reply as soon as possible.",
+    "ct.urg": "For an emergency, call +33&nbsp;3&nbsp;89&nbsp;40&nbsp;66&nbsp;06. To make an appointment, please use online booking.",
+    "ct.nom": "Full name",
+    "ct.email": "Email",
+    "ct.tel": "Phone",
+    "ct.facultatif": "(optional)",
+    "ct.animal": "Your pet",
+    "ct.animal.ex": "E.g. Filou, 4-year-old cat",
+    "ct.message": "Your message",
+    "ct.rgpd": "Your details are only used to reply to you. <a href=\"confidentialite.html\">Learn more (in French)</a>",
+    "ct.envoyer": "Send message",
+    "ct.ok": "Thank you, your message has been sent. We will reply as soon as possible.",
+    "ct.err": "Your message could not be sent. Please write to us directly at",
+    "ct.encours": "Sending…",
+    "ct.lien": "Write to us"
   },
   "de": {
     "meta.title": "Tierarzt in Altkirch bei Basel | Tierklinik Maison Bleue",
@@ -225,6 +241,22 @@
     "barre.label": "Schnellaktionen",
     "barre.appeler": "Anrufen",
     "barre.rdv": "Termin",
-    "rs.google": "Unser Google-Profil"
+    "rs.google": "Unser Google-Profil",
+    "ct.h2": "Schreiben Sie uns",
+    "ct.p": "Eine Frage, eine Offertanfrage, ein Dokument für uns? Schreiben Sie uns, wir antworten so rasch wie möglich.",
+    "ct.urg": "Im Notfall rufen Sie bitte +33&nbsp;3&nbsp;89&nbsp;40&nbsp;66&nbsp;06 an. Für einen Termin nutzen Sie die Online-Buchung.",
+    "ct.nom": "Vor- und Nachname",
+    "ct.email": "E-Mail",
+    "ct.tel": "Telefon",
+    "ct.facultatif": "(optional)",
+    "ct.animal": "Ihr Tier",
+    "ct.animal.ex": "z. B. Filou, Katze, 4 Jahre",
+    "ct.message": "Ihre Nachricht",
+    "ct.rgpd": "Ihre Angaben werden nur verwendet, um Ihnen zu antworten. <a href=\"confidentialite.html\">Mehr erfahren (auf Französisch)</a>",
+    "ct.envoyer": "Nachricht senden",
+    "ct.ok": "Vielen Dank, Ihre Nachricht wurde gesendet. Wir antworten so rasch wie möglich.",
+    "ct.err": "Die Nachricht konnte nicht gesendet werden. Schreiben Sie uns direkt an",
+    "ct.encours": "Wird gesendet…",
+    "ct.lien": "Schreiben Sie uns"
   }
 }

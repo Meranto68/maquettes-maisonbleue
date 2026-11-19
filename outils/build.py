@@ -228,7 +228,8 @@ page_legale("confidentialite.html", "Politique de confidentialité",
 
 <h2>Ce que fait ce site</h2>
 <ul>
-<li><strong>Aucun formulaire, aucun compte, aucune mesure d'audience.</strong> Le site ne collecte pas de données vous concernant.</li>
+<li><strong>Formulaire de contact :</strong> les informations que vous saisissez (nom, e-mail, téléphone et animal si vous les indiquez, message) sont envoyées par e-mail à la clinique, uniquement pour vous répondre. Elles ne sont pas enregistrées sur le site et sont conservées dans la messagerie de la clinique le temps nécessaire au suivi de votre demande.</li>
+<li><strong>Aucun compte, aucune mesure d'audience.</strong></li>
 <li><strong>Aucun cookie</strong> n'est déposé par le site lui-même. Les polices de caractères sont hébergées sur le site, sans appel à un service extérieur.</li>
 <li><strong>Carte Google Maps :</strong> elle ne se charge que si vous cliquez sur « Afficher la carte ». Google peut alors recevoir votre adresse IP et déposer des cookies, selon sa propre <a href="https://policies.google.com/privacy?hl=fr" rel="noopener">politique de confidentialité</a>.</li>
 <li><strong>Prise de rendez-vous en ligne :</strong> le bouton ouvre le service MonRendezVousVéto, qui traite vos données pour gérer votre rendez-vous selon ses propres conditions.</li>

@@ -19,3 +19,9 @@ Maquette du nouveau site (temporaire, non indexée par Google).
 4. Compléter et vérifier la fiche Google Business Profile de la clinique (horaires, photos, lien du site).
 5. Remplir les zones surlignées en jaune `[...]` dans les pages légales.
 
+
+## Formulaire de contact
+`contact.php` envoie les messages par e-mail à la clinique (fonction mail() de l'hébergement OVH, rien à configurer).
+- Adresses réglables en haut du fichier : `DESTINATAIRE` (qui reçoit) et `EXPEDITEUR` (doit être une adresse du domaine clinique-maisonbleue.com).
+- Protections : champ piège anti-robots, envoi trop rapide refusé, un message par minute et par adresse IP.
+- Sur GitHub Pages (pas de PHP), le formulaire affiche l'adresse e-mail de la clinique à la place.
